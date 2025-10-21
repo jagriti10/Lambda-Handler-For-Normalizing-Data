@@ -6,7 +6,7 @@
 - EventBridge triggers Lambda every 2 minutes.  
 - CloudWatch Dashboard shows Invocations, Errors, Duration (avg & p99), EventBridge invocations, S3 growth, and a Log Insights activity feed.
 
-![Project Architecture](./images/dataOps.png)
+![Project Architecture](./dataOps.png)
 
 ---
 
