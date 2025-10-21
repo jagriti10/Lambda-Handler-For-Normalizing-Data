@@ -9,19 +9,19 @@ import pandas as pd
 import numpy as np
 from botocore.exceptions import ClientError
 
-# ✅ Set up logging
+# Set up logging
 logger = logging.getLogger()
 logger.setLevel(logging.INFO)
 
-# ✅ S3 Client
+# S3 Client
 s3 = boto3.client("s3")
 
-# ✅ Environment Variables
+# Environment Variables
 BUCKET = os.environ.get("BUCKET_NAME", "dataops-pipeline-bucket")
 INPUT_KEY = os.environ.get("INPUT_KEY", "diabetes_preprocessed.csv")
 OUTPUT_PREFIX = os.environ.get("OUTPUT_PREFIX", "processed/")
 
-# ✅ Helper functions
+# Helper functions
 def _now_id():
     """Generate timestamp for versioning"""
     return datetime.utcnow().strftime("%Y%m%dT%H%M%SZ")
